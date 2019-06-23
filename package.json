@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/karmitage/FriendFinder/issues"
   },
-  "homepage": "https://github.com/karmitage/FriendFinder#readme"
+  "homepage": "https://github.com/karmitage/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
