@@ -35,7 +35,6 @@ module.exports = function (app) {
                 var responderScore = responses[k];
                 //running total of difference
                 difference += Math.abs(parseInt(responderScore) - parseInt(friendScore));
-                console.log("difference is: " + difference);
             }
             // if the difference is less than the current best match, set this friend to be the match
             if (difference <= friendMatch.compatibility) {
@@ -43,16 +42,11 @@ module.exports = function (app) {
                 friendMatch.name = friend.name;
                 friendMatch.photo = friend.photo;
                 friendMatch.compatibility = difference;
-                console.log("blah");
             }
-
-            console.log("No, really, what is it?" + friendMatch.name);
 
         }
         //push the survey results to the friend object
         friendData.push(surveyData);
-
-        console.log("What is the friend match?" + friendMatch.name);
 
         //display their closest match
         res.json(friendMatch);
