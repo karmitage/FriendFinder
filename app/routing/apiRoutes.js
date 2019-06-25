@@ -17,11 +17,10 @@ module.exports = function (app) {
         var friendMatch = {
             name: "",
             photo: "",
-            compatibility: Infinity
+            compatibility: 10000000 //set the initial compatibility score to a very high number
         };
 
-        //loop over the friends list and compare each friends' scores to the
-        //current user scores:
+        //loop over the friends list and compare each friends' scores to the current user scores:
 
         for (i = 0; i < friends.length; i++) {
             var friend = friends[i];
@@ -30,13 +29,20 @@ module.exports = function (app) {
             //inner loop to compare the specific friends' score to the user score
 
             for (k = 0; k < friend.scores.length; k++) {
-
+                var friendScore = friendScore.scores[k];
+                var responderScore = responses.scores[k];
+                //running total of difference
+                difference += Math.abs(parseInt(responderScore) - parseInt(friendScore));
+            }
+            // if the difference is less than the current best match, set this friend to be the match
+            if (difference <= friendMatch.compatbility) {
+                // Reset the bestMatch to be the new friend.
+                friendMatch.name = friend.name;
+                friendMatch.photo = friend.photo;
+                friendMatch.compatibility = difference;
             }
 
-
         }
-
-
         //push the survey results to the friend object
         friends.push(surveyData);
 
