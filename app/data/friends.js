@@ -1,5 +1,5 @@
 
-// friend data is stored here
+// survey data is stored in this array
 var friends = [
     {
         "name": "Ahmed",
@@ -16,5 +16,42 @@ var friends = [
             4,
             1
         ]
-    }
+    },
+    {
+        "name": "Katherine",
+        "photo": "https://www.publicdomainpictures.net/pictures/200000/nahled/portrait-of-a-cat.jpg",
+        "scores": [
+            5,
+            4,
+            4,
+            1,
+            5,
+            4,
+            3,
+            2,
+            5,
+            5
+        ]
+    },
+
+    {
+        "name": "Diana",
+        "photo": "https://www.publicdomainpictures.net/pictures/200000/nahled/portrait-of-a-cat.jpg",
+        "scores": [
+            5,
+            4,
+            4,
+            1,
+            5,
+            4,
+            3,
+            2,
+            5,
+            5
+        ]
+    },
+
 ];
+
+//export the friends array so that other files can access it:
+module.exports = friends;
