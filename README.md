@@ -14,8 +14,12 @@ FriendFinder is hosted on Heroku:
 
 # GitHub repo link
 
+https://github.com/karmitage/FriendFinder
+
 # Profile
 
-This project has been added to my profile here
+This project has been added to my profile here: https://karmitage.github.io/Responsive-Portfolio/portfolio.html
 
+# Heroku
 
+You can find this project on Heroku here: https://sleepy-hamlet-65162.herokuapp.com/
